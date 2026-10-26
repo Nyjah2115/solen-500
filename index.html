@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Solen – Okulary sportowe – Sklep internetowy</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 15px; line-height: 1.6; color: #555; background: #fff; }
+  body.no-cursor, body.no-cursor * { cursor: none !important; }
+  a { color: #d62828; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; display: block; }
+  .container { width: 1170px; max-width: 100%; margin: 0 auto; padding: 0 15px; }
+  h1, h2, h3, h4 { color: #222; margin: 0 0 12px; }
+  .impact { font-family: Impact, "Arial Black", sans-serif; font-weight: normal; letter-spacing: 1px; }
+
+  .topbar { background: #111; color: #bbb; font-size: 13px; }
+  .topbar .container { display: flex; justify-content: space-between; align-items: center; height: 38px; }
+  .topbar span { margin-right: 18px; }
+  .topbar .promo { color: #ffd60a; font-weight: bold; }
+  .social a { display: inline-block; width: 24px; height: 24px; margin-left: 6px; color: #fff; font-weight: bold; font-size: 13px; text-align: center; line-height: 24px; border-radius: 3px; }
+  .social .fb { background: #3b5998; } .social .ig { background: #c13584; } .social .yt { background: #e62117; }
+
+  header { border-bottom: 1px solid #e5e5e5; }
+  header .container { display: flex; align-items: center; justify-content: space-between; height: 100px; }
+  .logo { display: flex; align-items: center; gap: 10px; color: #222; }
+  .logo:hover { text-decoration: none; }
+  .logo .ico { font-size: 46px; line-height: 1; }
+  .logo b { display: block; font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: 42px; letter-spacing: 2px; color: #d62828; font-style: italic; text-shadow: 2px 2px 0 #222; }
+  .logo small { display: block; font-size: 13px; color: #888; margin-top: -2px; text-transform: uppercase; letter-spacing: 2px; }
+  .header-right { display: flex; align-items: center; gap: 20px; }
+  .search { display: flex; }
+  .search input { width: 240px; padding: 9px 10px; border: 2px solid #d62828; border-right: 0; font-size: 14px; }
+  .search button { background: #d62828; color: #fff; border: 0; padding: 0 14px; font-size: 15px; }
+  .cart { color: #222; font-weight: bold; font-size: 14px; }
+
+  nav { background: linear-gradient(#e63946, #b5171f); box-shadow: 0 2px 4px rgba(0,0,0,.3); position: relative; z-index: 5; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+  nav li a { display: block; padding: 15px 22px; color: #fff; font-weight: bold; font-size: 14px; text-transform: uppercase; border-right: 1px solid rgba(255,255,255,.2); }
+  nav li a:hover, nav li.active a { background: #222; text-decoration: none; }
+  nav li.hot a::after { content: "HOT"; margin-left: 6px; background: #ffd60a; color: #222; font-size: 10px; padding: 1px 4px; border-radius: 2px; vertical-align: top; }
+
+  .slider { position: relative; height: 560px; overflow: hidden; background: #000; }
+  .slide { position: absolute; inset: 0; background-size: cover; background-position: center 30%; opacity: 0; transition: opacity 1s; }
+  .slide.on { opacity: 1; }
+  .slide::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.35); }
+  .slide .txt { position: absolute; z-index: 2; left: 0; right: 0; top: 50%; transform: translateY(-50%); text-align: left; color: #fff; padding: 0 0 0 140px; max-width: 980px; }
+  .slide h1 { color: #fff; font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: 64px; text-transform: uppercase; font-style: italic; text-shadow: 3px 3px 0 #b5171f, 4px 4px 10px rgba(0,0,0,.7); line-height: 1.05; }
+  .slide p { font-size: 21px; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,.9); margin: 0 0 26px; }
+  .btn { display: inline-block; padding: 12px 28px; background: #d62828; color: #fff; font-weight: bold; text-transform: uppercase; font-size: 14px; border: 0; cursor: pointer; }
+  .btn:hover { background: #222; text-decoration: none; }
+  .btn-yellow { background: #ffd60a; color: #222; font-size: 18px; padding: 15px 38px; box-shadow: 0 4px 0 #c9a800; font-family: Impact, "Arial Black", sans-serif; font-weight: normal; letter-spacing: 1px; }
+  .btn-yellow:hover { background: #ffe14d; color: #222; }
+  .arrow { position: absolute; z-index: 3; top: 50%; margin-top: -25px; width: 50px; height: 50px; background: rgba(214,40,40,.8); color: #fff; font-size: 34px; line-height: 46px; text-align: center; cursor: pointer; }
+  .arrow.l { left: 0; } .arrow.r { right: 0; }
+  .dots { position: absolute; z-index: 3; bottom: 22px; left: 0; right: 0; text-align: center; }
+  .dots i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,.5); margin: 0 5px; }
+  .dots i.on { background: #ffd60a; }
+  .ticker { background: #ffd60a; color: #222; font-weight: bold; text-align: center; padding: 10px; font-size: 15px; text-transform: uppercase; }
+
+  section { padding: 60px 0; }
+  .title { text-align: center; margin-bottom: 40px; }
+  .title h2 { font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: 38px; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+  .title h2 span { color: #d62828; }
+  .title .bar { width: 80px; height: 4px; background: #d62828; margin: 0 auto 16px; }
+  .title p { max-width: 760px; margin: 0 auto; }
+  .gray { background: #f2f2f2; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; text-align: center; }
+  .feature { background: #fff; padding: 34px 24px; border-top: 4px solid #d62828; box-shadow: 0 2px 6px rgba(0,0,0,.1); }
+  .feature .ic { font-size: 48px; line-height: 1; margin-bottom: 14px; }
+  .feature h3 { font-size: 18px; text-transform: uppercase; }
+  .feature p { margin: 0; }
+
+  .products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+  .card { border: 1px solid #ddd; text-align: center; padding-bottom: 20px; position: relative; background: #fff; }
+  .card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.2); border-color: #d62828; }
+  .card .badge { position: absolute; top: 12px; left: 12px; background: #d62828; color: #fff; font-size: 12px; font-weight: bold; padding: 4px 9px; }
+  .card .badge.y { background: #ffd60a; color: #222; }
+  .card h3 { font-size: 16px; margin: 16px 15px 4px; }
+  .card h3 a { color: #222; }
+  .stars { color: #f5b301; letter-spacing: 2px; font-size: 15px; }
+  .stars span { color: #999; font-size: 12px; letter-spacing: 0; }
+  .price { margin: 6px 0 14px; font-size: 22px; color: #d62828; font-weight: bold; }
+  .price s { color: #999; font-size: 15px; font-weight: normal; margin-right: 6px; }
+  .more { text-align: center; margin-top: 36px; }
+
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .about img { border: 6px solid #fff; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+  .about h2 { font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: 36px; text-transform: uppercase; }
+  .about ul { padding-left: 0; list-style: none; }
+  .about li { padding: 4px 0; border-bottom: 1px dashed #ccc; }
+  .about li::before { content: "✔ "; color: #2e9e3e; font-weight: bold; }
+
+  .newsletter { background: #222; color: #fff; padding: 36px 0; border-top: 5px solid #ffd60a; }
+  .newsletter .container { display: flex; align-items: center; justify-content: space-between; }
+  .newsletter h3 { color: #fff; font-size: 22px; margin: 0; text-transform: uppercase; }
+  .newsletter p { margin: 0; color: #bbb; }
+  .newsletter form { display: flex; }
+  .newsletter input { width: 300px; padding: 12px; border: 0; font-size: 14px; }
+  .newsletter button { background: #ffd60a; color: #222; border: 0; padding: 0 24px; font-weight: bold; }
+
+  .contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; }
+  .contact label { display: block; font-weight: bold; color: #222; font-size: 14px; margin-bottom: 4px; }
+  .contact input, .contact textarea { width: 100%; padding: 10px; border: 1px solid #ccc; font-family: inherit; font-size: 14px; margin-bottom: 14px; }
+  .contact textarea { height: 130px; resize: none; }
+  .contact .check { font-weight: normal; font-size: 13px; color: #666; display: flex; gap: 8px; align-items: flex-start; }
+  .contact .check input { width: auto; margin: 3px 0 0; }
+  .info p { margin: 0 0 10px; }
+  .map { margin-top: 20px; height: 200px; background: #e5e3df; border: 1px solid #d0d0d0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #777; font-size: 13px; padding: 0 30px; }
+  .map b { color: #444; font-size: 14px; margin-bottom: 6px; }
+
+  footer { background: #1a1a1a; color: #999; font-size: 14px; }
+  footer .cols { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding: 50px 15px 40px; }
+  footer h4 { color: #fff; text-transform: uppercase; font-size: 15px; border-bottom: 2px solid #d62828; display: inline-block; padding-bottom: 6px; }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 6px; }
+  footer a { color: #999; }
+  footer .bottom { background: #0d0d0d; padding: 16px 0 80px; font-size: 13px; }
+  footer .bottom .container { display: flex; justify-content: space-between; }
+
+  .cookies { position: fixed; z-index: 50; left: 0; right: 0; bottom: 0; background: rgba(20,20,20,.95); color: #ddd; font-size: 13px; padding: 14px 0; }
+  .cookies .container { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
+  .cookies button { background: #2e9e3e; color: #fff; border: 0; padding: 10px 26px; font-weight: bold; white-space: nowrap; }
+  .totop { position: fixed; z-index: 40; right: 22px; bottom: 90px; width: 44px; height: 44px; background: #d62828; color: #fff; text-align: center; line-height: 44px; font-size: 18px; }
+  .chat { position: fixed; z-index: 40; left: 22px; bottom: 90px; background: #2e9e3e; color: #fff; font-weight: bold; padding: 12px 18px; border-radius: 30px; box-shadow: 0 3px 10px rgba(0,0,0,.3); font-size: 14px; }
+
+  .popup { position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,.65); display: none; align-items: center; justify-content: center; }
+  .popup.on { display: flex; }
+  .popup .box { position: relative; width: 520px; background: #fff; text-align: center; padding: 40px 40px 34px; border-top: 8px solid #d62828; }
+  .popup .x { position: absolute; top: 8px; right: 14px; font-size: 26px; color: #999; cursor: pointer; }
+  .popup h2 { font-family: Impact, "Arial Black", sans-serif; font-weight: normal; font-size: 56px; color: #d62828; margin-bottom: 4px; }
+  .popup input { width: 100%; padding: 12px; border: 1px solid #ccc; margin: 16px 0 12px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <div><span>📞 +48 123 456 789</span><span>✉ kontakt@twojadomena.pl</span><span class="promo">🔥 DARMOWA DOSTAWA OD 199 ZŁ!</span></div>
+    <div class="social"><a class="fb" href="#">f</a><a class="ig" href="#">ig</a><a class="yt" href="#">▶</a></div>
+  </div>
+</div>
+
+<header>
+  <div class="container">
+    <a class="logo" href="#"><span class="ico">😎</span><span><b>SOLEN</b><small>Okulary sportowe</small></span></a>
+    <div class="header-right">
+      <form class="search" onsubmit="return false"><input placeholder="Czego szukasz?"><button>🔍</button></form>
+      <a class="cart" href="#">🛒 Koszyk (0) – 0,00 zł</a>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="container">
+    <ul>
+      <li class="active"><a href="#">Strona główna</a></li>
+      <li><a href="#">Okulary ▾</a></li>
+      <li class="hot"><a href="#">Promocje</a></li>
+      <li><a href="#">Akcesoria</a></li>
+      <li><a href="#">O nas</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="slider">
+  <div class="slide on" style="background-image:url(img/hero.jpg)">
+    <div class="txt">
+      <h1>Okulary sportowe<br>najwyższej jakości!</h1>
+      <p>Nowa kolekcja okularów Solen już w sprzedaży!</p>
+      <a class="btn btn-yellow" href="#">ZOBACZ OFERTĘ »</a>
+    </div>
+  </div>
+  <div class="slide" style="background-image:url(img/hero2.jpg)">
+    <div class="txt">
+      <h1>Nowość!<br>Aero 01</h1>
+      <p>Soczewki Iridium, oprawka tylko 21 g – teraz w promocji!</p>
+      <a class="btn btn-yellow" href="#">KUP TERAZ »</a>
+    </div>
+  </div>
+  <div class="arrow l">‹</div><div class="arrow r">›</div>
+  <div class="dots"><i class="on"></i><i></i></div>
+</div>
+<div class="ticker">⚡ Promocja tygodnia: -15% na model Aero 01 ⚡ Wysyłka w 24h ⚡ 30 dni na zwrot ⚡</div>
+
+<section>
+  <div class="container">
+    <div class="title">
+      <h2>Witamy w sklepie <span>Solen!</span></h2>
+      <div class="bar"></div>
+      <p>Jesteśmy sklepem specjalizującym się w sprzedaży wysokiej jakości okularów sportowych. Nasze okulary sprawdzą się podczas biegania, jazdy na rowerze i każdej innej aktywności. Zapraszamy do zapoznania się z naszą ofertą!</p>
+    </div>
+  </div>
+</section>
+
+<section class="gray">
+  <div class="container">
+    <div class="features">
+      <div class="feature"><div class="ic">🚚</div><h3>Darmowa dostawa</h3><p>Przy zamówieniu powyżej 199 zł. Wysyłka w 24 godziny!</p></div>
+      <div class="feature"><div class="ic">🛡️</div><h3>Gwarancja na soczewki</h3><p>Dożywotnia gwarancja na wszystkie soczewki Solen.</p></div>
+      <div class="feature"><div class="ic">☀️</div><h3>Filtr UV400</h3><p>100% ochrony przed promieniowaniem UV. Chroń swoje oczy!</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="title"><h2>Nasze <span>bestsellery</span></h2><div class="bar"></div><p>Najchętniej wybierane modele</p></div>
+    <div class="products">
+      <div class="card">
+        <span class="badge">-15%</span>
+        <img src="img/p1.jpg" alt="">
+        <h3><a href="#">Okulary sportowe Solen Aero 01</a></h3>
+        <div class="stars">☆☆☆☆☆ <span>(0 opinii)</span></div>
+        <div class="price"><s>1 229,00 zł</s>1 049,00 zł</div>
+        <a class="btn" href="#">🛒 Do koszyka</a>
+      </div>
+      <div class="card">
+        <img src="img/p2.jpg" alt="">
+        <h3><a href="#">Okulary Solen Aero 01 – gunmetal</a></h3>
+        <div class="stars">☆☆☆☆☆ <span>(0 opinii)</span></div>
+        <div class="price">1 049,00 zł</div>
+        <a class="btn" href="#">🛒 Do koszyka</a>
+      </div>
+      <div class="card">
+        <span class="badge y">NOWOŚĆ</span>
+        <img src="img/p3.jpg" alt="">
+        <h3><a href="#">Okulary Solen Aero 01 – zestaw z etui</a></h3>
+        <div class="stars">☆☆☆☆☆ <span>(0 opinii)</span></div>
+        <div class="price">1 099,00 zł</div>
+        <a class="btn" href="#">🛒 Do koszyka</a>
+      </div>
+    </div>
+    <div class="more"><a class="btn btn-yellow" href="#">ZOBACZ WSZYSTKIE PRODUKTY »</a></div>
+  </div>
+</section>
+
+<section class="gray">
+  <div class="container about">
+    <img src="img/hero2.jpg" alt="">
+    <div>
+      <h2>Dlaczego <span style="color:#d62828">Solen?</span></h2>
+      <p>Okulary Solen to połączenie nowoczesnej technologii i sportowego designu. Każda soczewka jest dokładnie sprawdzana przed wysyłką.</p>
+      <ul>
+        <li>Przejrzystość soczewek: 98%</li>
+        <li>Lepszy kontrast: +34%</li>
+        <li>Filtr UV 400 nm – 100% ochrony</li>
+        <li>Waga oprawki: tylko 21 g</li>
+        <li>Odporność na uderzenia: Z87.1+</li>
+        <li>Pole widzenia: 180°</li>
+      </ul>
+      <a class="btn" href="#">Czytaj więcej »</a>
+    </div>
+  </div>
+</section>
+
+<div class="newsletter">
+  <div class="container">
+    <div><h3>📧 Zapisz się do newslettera!</h3><p>Odbierz kod rabatowy -10% na pierwsze zakupy.</p></div>
+    <form onsubmit="return false"><input placeholder="Twój adres e-mail"><button>ZAPISZ SIĘ</button></form>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="title"><h2>Kontakt</h2><div class="bar"></div><p>Masz pytania? Napisz do nas!</p></div>
+    <div class="contact">
+      <form onsubmit="return false">
+        <label>Imię i nazwisko *</label><input>
+        <label>Adres e-mail *</label><input>
+        <label>Telefon</label><input>
+        <label>Wiadomość *</label><textarea></textarea>
+        <label class="check"><input type="checkbox"> Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. Zapoznałem/am się z Polityką prywatności.</label>
+        <button class="btn" style="margin-top:12px">Wyślij wiadomość</button>
+      </form>
+      <div class="info">
+        <h3>Dane kontaktowe</h3>
+        <p>📍 ul. Przykładowa 1, 00-001 Warszawa</p>
+        <p>📞 +48 123 456 789</p>
+        <p>✉ kontakt@twojadomena.pl</p>
+        <p>🕒 Poniedziałek – Piątek: 9:00 – 17:00</p>
+        <div class="map"><b>Ta strona nie może poprawnie wczytać mapy.</b>Czy jesteś właścicielem tej witryny?</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container cols">
+    <div><h4>Solen</h4><p>Sklep z okularami sportowymi. Oferujemy wysokiej jakości okulary w atrakcyjnych cenach. Zapraszamy do zakupów!</p></div>
+    <div><h4>Menu</h4><ul><li><a href="#">» Strona główna</a></li><li><a href="#">» Okulary</a></li><li><a href="#">» Promocje</a></li><li><a href="#">» Kontakt</a></li></ul></div>
+    <div><h4>Informacje</h4><ul><li><a href="#">» Regulamin</a></li><li><a href="#">» Polityka prywatności</a></li><li><a href="#">» Dostawa i płatności</a></li><li><a href="#">» Zwroty i reklamacje</a></li></ul></div>
+  </div>
+  <div class="bottom">
+    <div class="container"><span>© 2026 Solen. Wszelkie prawa zastrzeżone.</span><span>Polityka prywatności | Regulamin</span></div>
+  </div>
+</footer>
+
+<a class="chat" href="#">💬 Napisz do nas!</a>
+<a class="totop" href="#">▲</a>
+
+<div class="cookies" id="cookies">
+  <div class="container">
+    <span>Ta strona korzysta z plików cookies w celu realizacji usług zgodnie z Polityką prywatności. Możesz określić warunki przechowywania lub dostępu do cookies w Twojej przeglądarce.</span>
+    <button onclick="document.getElementById('cookies').style.display='none'">ROZUMIEM</button>
+  </div>
+</div>
+
+<div class="popup" id="popup">
+  <div class="box">
+    <span class="x" onclick="document.getElementById('popup').classList.remove('on')">×</span>
+    <p style="margin:0;font-weight:bold;color:#222">CZEKAJ! MAMY DLA CIEBIE PREZENT!</p>
+    <h2>-10%</h2>
+    <p style="margin:0">na pierwsze zakupy po zapisaniu się do newslettera</p>
+    <input placeholder="Twój adres e-mail">
+    <a class="btn btn-yellow" href="#" onclick="document.getElementById('popup').classList.remove('on');return false">ODBIERZ RABAT</a>
+  </div>
+</div>
+
+<script>
+(() => {
+  // slider (co 4 s)
+  const slides = [...document.querySelectorAll('.slide')], dots = [...document.querySelectorAll('.dots i')];
+  let cur = 0;
+  const show = i => {
+    cur = (i + slides.length) % slides.length;
+    slides.forEach((s, j) => s.classList.toggle('on', j === cur));
+    dots.forEach((d, j) => d.classList.toggle('on', j === cur));
+  };
+  let timer = setInterval(() => show(cur + 1), 4000);
+  const restart = () => { clearInterval(timer); timer = setInterval(() => show(cur + 1), 4000); };
+  document.querySelector('.arrow.l').onclick = () => { show(cur - 1); restart(); };
+  document.querySelector('.arrow.r').onclick = () => { show(cur + 1); restart(); };
+
+  // ---------- do nagrywania (jak w Solen) ----------
+  // A = auto-scroll przez całą stronę, C = kursor, 0 = góra, P = popup z rabatem, K = pasek cookies
+  const AUTO_SECONDS = 16;
+  let auto = null;
+  const maxScroll = () => document.documentElement.scrollHeight - innerHeight;
+  function stopAuto() { if (auto) cancelAnimationFrame(auto.raf); auto = null; }
+  function startAuto() {
+    stopAuto();
+    const from = scrollY, to = maxScroll();
+    const dur = AUTO_SECONDS * 1000 * (1 - from / to);
+    const t0 = performance.now();
+    const step = now => {
+      const t = Math.min(1, (now - t0) / dur);
+      scrollTo(0, from + (to - from) * t);
+      if (t < 1) auto.raf = requestAnimationFrame(step); else auto = null;
+    };
+    auto = { raf: requestAnimationFrame(step) };
+  }
+  addEventListener('keydown', e => {
+    if (e.target.matches('input, textarea')) return;
+    const k = e.key.toLowerCase();
+    if (k === 'a') auto ? stopAuto() : startAuto();
+    if (k === 'c') document.body.classList.toggle('no-cursor');
+    if (k === '0') { stopAuto(); scrollTo(0, 0); }
+    if (k === 'p') document.getElementById('popup').classList.toggle('on');
+    if (k === 'k') { const c = document.getElementById('cookies'); c.style.display = c.style.display === 'none' ? '' : 'none'; }
+  });
+  addEventListener('wheel', stopAuto, { passive: true });
+})();
+</script>
+</body>
+</html>
